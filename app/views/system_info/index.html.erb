@@ -1,0 +1,18 @@
+<h2><%= t('.title') %></h2>
+
+<h3><%= t('.os_info') %></h3>
+
+<table class="list">
+  <tr>
+    <th width="200"><%= t('.os_type') %></th>
+    <td><%= SystemInfo::OS.os_type %></td>
+  </tr>
+  <tr>
+    <th width="200">アーキテクチャ</th>
+    <td><%= SystemInfo::OS.os_arch %></td>
+  </tr>
+</table>
+
+<%= render partial: 'disk_stat' %>
+
+<%= render partial: 'memory_stat' %>

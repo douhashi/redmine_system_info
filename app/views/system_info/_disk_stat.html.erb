@@ -1,0 +1,22 @@
+<h3><%= t('.title') %></h3>
+<table class="list">
+  <tr>
+    <th width="200"><% t('.mount_point') %></th>
+    <th><%= t('.disk_avail') %></th>
+    <th><%= t('.disk_total') %></th>
+  </tr>
+
+  <% stat = SystemInfo::OS.get_disk_stat(Rails.root) %>
+  <tr>
+    <th>Rails.root</th>
+    <td><%= sprintf('%.2f', stat[:available]) %> GB</td>
+    <td><%= sprintf('%.2f', stat[:total]) %> GB</td>
+  </tr>
+
+  <% stat = SystemInfo::OS.get_disk_stat(Rails.root.join('files')) %>
+  <tr>
+    <th>files</th>
+    <td><%= sprintf('%.2f', stat[:available]) %> GB</td>
+    <td><%= sprintf('%.2f', stat[:total]) %> GB</td>
+  </tr>
+</table>

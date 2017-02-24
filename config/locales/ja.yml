@@ -1,0 +1,16 @@
+ja:
+  label_system_info: システム情報
+  system_info:
+    index:
+      title: システム情報
+      os_info: OS情報
+      os_type: OS種別
+      os_arch: アーキテクチャ
+    disk_stat:
+      title: ディスク利用状況
+      disk_avail: 空き容量
+      disk_total: 総容量
+    memory_stat:
+      title: メモリ利用状況
+      memory_avail: 空き容量
+      memory_total: 総容量
