@@ -1,0 +1,1 @@
+# Redmine System Info Plugin
